@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select menu</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			padding: 5px
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+	/*	li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}*/
+		p{
+			margin: 0px;
+		}
+		.ui-menu{
+			width: 200px;
+		}
+		#division{
+			width: 20px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+
+<div class="blue ui-corner-all" id="fb">
+
+<label for="division">Select Division:</label>
+<select id="division" name="division">
+	<option>Dhaka</option>
+	<option selected="selected">Chittagong</option>
+	<option>Barisal</option>
+	<option>Khulna</option>
+	<option>Rajsahi</option>
+	<option>Sylhet</option>
+	<option>Rangpur</option>
+	<option>Mymensing</option>
+
+
+
+
+</select>
+
+</div>
+		
+
+
+<div class="red ui-corner-all" id="youtube">
+<form>
+<label for="division2">Select Division:</label>
+<select id="division2" name="division2">
+	<optgroup label="Dhaka">
+	<option>Dhaka</option>
+	<option>Gazipur</option>
+	<option>Narayanganj</option>
+	</optgroup>
+	<optgroup label="Chittagong">
+	<option>Cox's Bazar</option>
+	<option>Comilla</option>
+	<option>Noakhali</option>
+	</optgroup>
+
+
+
+</select>
+
+</form>
+</div>
+	
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">	
+	
+	</div>
+
+	<div id="twitter" class="ui-corner-all"></div>
+
+
+
+<script>
+$(function(){
+
+$("#division").selectmenu();
+$("#division2").selectmenu();
+});
+
+</script>
+</body>
+</html>

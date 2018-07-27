@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expression</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<p>String : <span id="string"></span></p>
+	<p>Pattern : <span id="pattern"></span></p>
+	<p>Result(search) : <span id="search"></span></p>
+	<p>Result(match) : <span id="match"></span></p>
+	<p>Result(test) : <span id="test"></span></p>
+
+	
+
+<script>
+	str="Chittagong city corporation 4217 &*";
+	// str="Chittagong city \n corporation 4217 &*";
+	// pattern=new RegExp("c","g");		//search for c's
+	// pattern=/c/g;		//search for c's
+	// pattern=/[a-z]/g;	//search for alphabet between a to z
+	// pattern=/[htg]/g;	//search for h t g
+	// pattern=/[^htg]/g;	//search for other than h t g
+	// pattern=/\d/g;		//search for digits
+	// pattern=/\d{4}/g;	//search for 4digit number
+	// pattern=/\d{5}/g;	//search for 5digit number
+	// pattern=/\d{2}/g;	//search for 2digit number
+	// pattern=/[4-8]/g;	//search for digit between 4to8
+	// pattern=/\w/g;		//search for alphanumeric
+	// pattern=/\W/g;		//search for non alphanumeric
+	// pattern=/\s/g;		//search for space
+	// pattern=/^c/i;		//search for if first character is c
+	// pattern=/^A/i;		//search for if first character is A
+	pattern=/\n/g;			//search for linebreak
+
+
+
+
+	// window.alert(pattern.test(str));
+	// window.alert(str.match(pattern));
+	document.getElementById("string").innerHTML=str;
+	document.getElementById("pattern").innerHTML=pattern;
+	document.getElementById("search").innerHTML=str.search(pattern);
+	document.getElementById("match").innerHTML=str.match(pattern);
+	document.getElementById("test").innerHTML=pattern.test(str);
+
+
+</script>
+
+</body>
+</html>

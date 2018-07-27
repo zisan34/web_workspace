@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dragable & droppable</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 30px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 20px;
+			width: 200px;
+			background-color: rgb(255, 0, 0);
+			padding: 10px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#droppable{
+			height: 100px;
+			background-color: purple;
+			margin-top: 5px;
+		}
+		p{
+			margin: 0px;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/
+	jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="jq/jquery-3.3.1.min.js"></script> -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue ui-corner-all" id="fb">
+		facebook
+
+	</div>
+
+	<div class="red ui-corner-all" id="youtube">
+		youtube	
+
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+	</div>
+	<div id="droppable" class="ui-corner-all">drop here</div>
+
+
+
+<script>
+	var message=["please!", "leave me alone!", "drop me!", "come on!","thank u :)"];
+$(function(){
+	$("#fb").draggable();
+
+	$("#youtube").draggable({axis:"y"});
+
+	$("#ummaland").draggable({revert:true, 
+		start: function(){
+		$("#fb").css("background-color","black"); 
+						}, 
+		drag: function(){
+			$("#ummaland").find("p").html(message[Math.floor(4*Math.random())]);
+
+			// $("#ummaland").find("p").html(4*Math.random());
+
+			$("#ummaland").css("background-color", 'rgb('+255*Math.random()+','+255*Math.random()+','+255*Math.random()+')');
+						}, 
+		stop: function(){
+			$("#youtube").css("background-color","grey");
+			// $("#ummaland").find("p").html(message[4]);
+			$("#ummaland").find("p").html("<p>finally! thank u! </p>");
+			// $("#ummaland").html("<p>finally! thank u! </p>");
+
+							}
+							});
+	$("#droppable").droppable({
+		drop: function(){
+			$(this).css("background-color","yellow");
+		},
+		accept: "#youtube"
+	});
+
+});
+
+</script>
+</body>
+</html>

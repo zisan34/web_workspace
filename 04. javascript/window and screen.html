@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window and Screen</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+<style>
+	#d1{ background-color: blue;}
+	#d2{ background-color: red;  }
+	#d3{ background-color: yellow;  }
+	#d4{ background-color: purple; }
+	.div{
+		float: left;
+		margin-right: 5px;
+	}
+
+</style>
+<body>
+	<!-- <div id="d"></div> -->
+	<div id="d1" class="div">Div 1</div>
+	<div id="d2" class="div">Div 2</div>
+	<div id="d3" class="div">Div 3</div>
+	<div id="d4" class="div">Div 4</div>
+
+<script>
+	windowHeight=window.innerHeight;
+	// document.getElementById("d").innerHTML+="window Height: "+windowHeight+"<br>";
+	screenHeight=window.screen.height;
+	// document.getElementById("d").innerHTML+="screen Height: "+screenHeight+"<br>";
+	windowWidth=window.innerWidth;
+	// document.getElementById("d").innerHTML+="window Width: "+windowWidth+"<br>";
+window.alert(windowWidth);
+
+	screenWidth=window.screen.width;
+	// document.getElementById("d").innerHTML+="screen Width: "+screenWidth+"<br>";
+
+	// window.alert(window.screen.availHeight);
+
+	// document.getElementsByClassName("div").style.height=(windowHeight-16)+"px";
+	for(i=1;i<5;i++)
+	{
+		document.getElementById("d"+i).style.width=window.innerWidth/4-10+"px";
+		document.getElementById("d"+i).style.height=windowHeight-16+ "px";
+
+	}
+
+
+</script>
+
+</body>
+</html>

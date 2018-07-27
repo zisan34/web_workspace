@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>accordion</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}
+		p,ul{
+			margin: 0px;
+		}
+		.connectedList{
+			min-height: 30px;
+			border: dotted 1px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+	<div id="resizer" class="ui-widget-content">
+		<div class="blue ui-corner-all" id="fb">
+		<h1>Section 1</h1>
+		<div>
+			<p>Content 1</p>
+			<p>Content 2</p>
+			<p>Content 3</p>
+		</div>
+		
+		<h1>Section 2</h1>
+		<div><p>Content 1</p></div>
+		<h1>Section 3</h1>
+		<div><p>Content 1</p></div>
+		
+	</div>
+	</div>
+
+
+	<div id="container">
+		<div class="red ui-corner-all" id="youtube">
+		youtube
+		</div>
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+	
+	
+	</div>
+	<div id="twitter" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#fb").accordion({
+		collapsible: true,
+		icons: {
+			header: "ui-icon-circle-arrow-e", activeHeader: "ui-icon-circle-arrow-s"
+		},
+		heightStyle : "fill"
+		// heightStyle : "content"
+
+	});
+	$("#resizer").resizable({
+		resize: function(){
+			$("#fb").accordion("refresh");
+		}
+
+	});
+
+});
+
+</script>
+</body>
+</html>

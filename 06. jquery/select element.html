@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>select html element with jquery</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #24C166;
+
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue">
+		<p>Facebook is <span id="great">great social media.</span></p>
+		<p>paragraph</p>
+		<p>another para</p>
+	</div>
+	<div>hi div</div>
+	<p class="blue">bye p</p>
+	<div class="red">
+		<p>Youtube</p>
+		<p>It's video sharing website</p>
+		<p>third chid paragraph</p>
+	</div>
+	<div class="green">
+		<p>Ummaland</p>
+	</div>
+
+
+<script>
+	$(function(){
+		// $("*").css("font-size","30px");
+		// $("p").css("font-size","30px");
+
+		// $("div > p").css("text-align","center"); //direct paragraph child of div
+		// $("div p").css("text-align","center"); //decendent paragraph of div
+
+		// $("div ~ p").css("text-align","center"); //paragraph sibling of div
+		
+		// $("div").css("text-align","center"); //all divs
+		
+		// $("#great").css("background-color","orange");
+		// $(".blue").css("background-color","purple"); //all blue class
+		// $("div.blue").css("font-family","sans-serif"); //blue class divs only
+
+		// $("p:first-child").css("text-decoration","underline");
+		// $("p:last-child").css("text-decoration","underline");
+		$("p:last-child, p:first-child").css("text-decoration","underline");
+
+
+
+
+
+
+	});
+</script>
+</body>
+</html>

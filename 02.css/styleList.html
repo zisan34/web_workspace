@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Sprite</title>
+	<style type="text/css">
+		ul.l1 {
+			/*list-style: square;*/
+			/*list-style: lower-roman;*/
+			list-style-image: url(images/lights.jpg);
+		}
+		ul.l2 {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		ul.l2 li {
+			background-image: url(images/lights.jpg);
+			background-repeat: no-repeat;
+			background-position: 0px center;
+			padding-left: 30px;
+		}
+
+	</style>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<ul class="l1">
+		<li>Dhaka</li>
+		<li>Delhi</li>
+		<li>Colombo</li>
+	</ul>
+	<ul class="l2">
+		<li>Dhaka</li>
+		<li>Delhi</li>
+		<li>Colombo</li>
+	</ul>
+
+</body>
+</html>

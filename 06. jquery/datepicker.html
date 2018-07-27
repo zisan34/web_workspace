@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date picker</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			padding: 5px
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}
+		p,ul{
+			margin: 0px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+	<div class="blue ui-corner-all" id="fb">
+		<p>Flight departure date: <input id="departure"></p>
+		<p>Flight return date: <input id="return"></p>
+
+	</div>	
+
+	<div class="red ui-corner-all" id="youtube">
+			
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">	
+	
+	</div>
+
+	<div id="twitter" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#departure").datepicker({
+		showAnim: "drop"
+		// showAnim: "slideDown"
+		// showAnim: "fadeIn"
+		,changeYear: "true"
+		,changeMonth: "true"
+		,numberOfMonths: 2
+		,dateFormat: "M dd,yy"
+		,showOn: "button"
+		// ,buttonImage: "url"
+		// ,buttonImageOnly: true
+		// buttonText: "Your departure date"
+		,minDate: +1
+		,maxDate: "+15M +18D"
+		,onClose: function(selectedDate){
+			$("#return").datepicker("option", "minDate",selectedDate);
+		}
+		,showWeek: true
+
+	});
+	$("#return").datepicker({
+		dateFormat: "M dd,yy"
+	});
+
+
+
+});
+
+</script>
+</body>
+</html>

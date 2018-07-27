@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sortable</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 30px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}
+		p,ul{
+			margin: 0px;
+		}
+		.connectedList{
+			min-height: 30px;
+			border: dotted 1px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue ui-corner-all" id="fb">
+		facebook
+
+	</div>
+
+	<div id="container">
+		<div class="red ui-corner-all" id="youtube">
+		<ul id="list1" class="connectedList">
+			<li class="ui-state-default">Nokia</li>
+			<li class="ui-state-default">Samsung</li>
+			<li class="ui-state-default notSortable">IPhone</li>
+
+		</ul>
+		</div>
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+<!-- 		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+ -->	
+	<ul id="list2" class="connectedList">
+			<li class="ui-state-default">HTC</li>
+			<li class="ui-state-default">ZTE</li>
+			<li class="ui-state-default">MI</li>
+
+		</ul>
+	</div>
+	<div id="twitter" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#list1").sortable({
+		placeholder: "ui-state-highlight",
+		// cancel:".notSortable"
+	});
+	$("#list2").sortable();
+	$("#list2, #list1 ").sortable({
+		connectWith: ".connectedList"
+	});
+
+
+});
+
+</script>
+</body>
+</html>

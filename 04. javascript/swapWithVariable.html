@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Swap using variables</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #24C166;
+
+		}
+		.great {
+			background-color: #000;
+			color: yellow;
+		}
+	</style>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	
+	<button id=swapBR>Swap between Blue and Red.</button>
+	<button id="swapRG" onclick=swap('red','green')>Swap between Red and Green.</button>
+	<!-- <button id="changeGreen">Change Green.</button> -->
+
+	<div class="blue" id=blue>
+		<p>Facebook is <span class="great">great social media.</span></p>
+	</div>
+	<div class="red" id=red>
+		<p>Youtube</p>
+	</div>
+	<div class="green" id=green>
+		<p>Ummaland</p>
+	</div>
+
+<script>
+	function swap(id1,id2)
+	{
+		var x=document.getElementById(id1).innerHTML;
+		var y=document.getElementById(id2).innerHTML;
+		document.getElementById(id1).innerHTML=y;
+		document.getElementById(id2).innerHTML=x;
+	}
+	document.getElementById("swapBR").onclick=function()
+	{
+		swap("blue","red");
+	}
+
+
+</script>
+</body>
+</html>

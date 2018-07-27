@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>random</title>
+	<style>
+	/*body{
+		margin: 5px 5px;
+	}*/
+	div{
+		width: 100px;
+		height: 100px;
+		margin-right: 10px;
+		margin-bottom: 12px;
+		box-shadow: 5px 10px 0px grey;
+		border-radius: 5px;
+		position: relative;
+		float: left;
+	}
+	div:hover{
+		box-shadow: 0px 0px ;
+		top:10px;
+	}
+	.clear{
+		width: 0px;
+		height: 0px;
+		clear: both;
+		margin: 0px 0px;
+	}
+	</style>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div id="cr11" class="r1"></div>
+	<div id="cr12" class="r1"></div>
+	<div id="cr13" class="r1"></div>
+	<div class="clear"></div>
+	<div id="cr21" class="r2"></div>
+	<div id="cr22" class="r2"></div>
+	<div id="cr23" class="r2"></div>
+	<div class="clear"></div>
+
+	<div id="cr31" class="r3"></div>
+	<div id="cr32" class="r3"></div>
+	<div id="cr33" class="r3"></div>
+
+<script>
+	// x=Math.round(Math.random()*256);
+	// y=Math.round(Math.random()*256);
+	// z=Math.round(Math.random()*256);
+	// color="rgb("+x+","+y+","+z+")";
+	// document.getElementById("cr11").style.backgroundColor=color;
+
+
+	// while(true)
+	// {
+	for(j=1;j<4;j++)
+	{
+		for(i=1;i<4;i++)
+	{
+		document.getElementById("cr"+j+i).style.width=window.innerWidth/3-25+"px";
+		document.getElementById("cr"+j+i).style.height=window.innerHeight/3-25+ "px";
+		
+
+
+	}
+	}
+	setInterval(function(){
+		for(j=1;j<4;j++)
+	{
+		for(i=1;i<4;i++)
+	{
+		x=Math.round(Math.random()*256);
+		y=Math.round(Math.random()*256);
+		z=Math.round(Math.random()*256);
+		color="rgb("+x+","+y+","+z+")";
+		document.getElementById("cr"+j+i).style.backgroundColor=color;
+	}
+	}
+	}, 500);
+	
+</script>
+
+
+</body>
+</html>

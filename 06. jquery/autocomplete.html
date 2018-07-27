@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>autocomplete</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}
+		p,ul{
+			margin: 0px;
+		}
+		.connectedList{
+			min-height: 30px;
+			border: dotted 1px;
+		}
+		
+		#city{
+			width: 200px;
+		}
+		.ui-autocomplete{
+			max-height: 100px;
+			overflow-y: auto;
+			max-width: 200px;
+			/*font-size: 5px;*/
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+	<div id="resizer" class="ui-widget-content">
+		<div class="blue ui-corner-all" id="fb">
+		<p>Enter your city: <input id="city"></p>
+	</div>
+	</div>
+	
+
+	<div id="container">
+		<div class="red ui-corner-all" id="youtube">
+		youtube
+		</div>
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+	
+	
+	</div>
+	<div id="twitter" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#city").autocomplete({
+		source: ["Dhaka", "Chittagooooooooong", "Khulna", "Rajshahi", "Barisal", "Rangpur","Sylhet","Cox's Bazar","Jessore","Dhaka", "Chittagong", "Khulna", "Rajshahi", "Barisal", "Rangpur","Sylhet","Cox's Bazar","Jessore","Dhaka", "Chittagong", "Khulna", "Rajshahi", "Barisal", "Rangpur","Sylhet","Cox's Bazar","Jessore","Dhaka", "Chittagong", "Khulna", "Rajshahi", "Barisal", "Rangpur","Sylhet","Cox's Bazar","Jessore"]
+	});
+
+});
+
+</script>
+</body>
+</html>

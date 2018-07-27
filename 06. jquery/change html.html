@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change html elements</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		/*p:hover{
+			cursor: pointer;
+		}*/
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue" id="fb">
+		facebook
+
+	</div>
+		<button id="changeFbText">change fb text</button>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+	<button id="changeRedHTML">change HTML of red</button>
+	<div class="green" id="ummaland">
+		ummaland<br>	
+		Your age: 	<input id="age">
+		<button id="changeAgeTo40">40</button>
+		<button id="changeAgeTo30">30</button>
+		<button id="changeAgeTo20">20</button>
+		<button id="changeAgeTo10">10</button>
+	</div>
+	<p><a href="http://www.fb.com" title="facebook" id="fbLink" >facebook</a></p>
+	<button id="changeFbLink">change fb link</button>
+
+
+<script>
+$(function(){
+$("#changeFbText").click(
+function()
+{
+	$("#fb").text("facebook is great");
+});
+
+$("#changeRedHTML").click(
+function()
+{
+	$("#youtube").html("<p>youtube</p><p>it's most popular video sharing site</p>");
+});
+
+$("#changeAgeTo10").click(
+	function()
+	{
+		$("#age").val("10");
+
+	});
+$("#changeAgeTo20").click(
+	function()
+	{
+		$("#age").val("20");
+
+	});
+$("#changeAgeTo30").click(
+	function()
+	{
+		$("#age").val("30");
+
+	});
+$("#changeAgeTo40").click(
+	function()
+	{
+		$("#age").val("40");
+
+	});
+
+$("#changeFbLink").click(
+	function()
+	{
+		$("#fbLink").attr({"href" : "http://www.google.com", "title": "google"});
+		$("#fbLink").text("google");
+
+	});
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>resizable</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 30px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: 200px;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#droppable{
+			height: 100px;
+			background-color: purple;
+			margin-top: 5px;
+		}
+		#container{
+			height: 100px;
+			width: 200px;
+			border-style: dotted;
+		}
+		p,ul{
+			margin: 0px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue ui-corner-all" id="fb">
+		facebook
+
+	</div>
+
+	<div id="container">
+		<div class="red ui-corner-all" id="youtube">
+		youtube
+		</div>
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+	</div>
+	<div id="droppable" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#fb").resizable({
+		maxHeight: 200, minHeight:50, minWidth:100, maxWidth:300,
+		alsoResize:"#ummaland"
+	});
+	$("#youtube").resizable({
+		containment:"#container",
+		animate: true,
+		ghost: true
+	});
+	$("#ummaland").resizable({aspectRatio: 5/3, ghost:true
+
+	});
+
+});
+
+</script>
+</body>
+</html>

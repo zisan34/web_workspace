@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change html elements 2</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: 300px;
+			background-color: rgb(255, 0, 0);
+			padding: 10px;
+			border: 5px ridge;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+			border:8px ridge;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		/*p:hover{
+			cursor: pointer;
+		}*/
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue" id="fb">
+		facebook
+
+	</div>
+	<button id="changeFb">change facebook div width</button>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+	<button id="changeYt">change youtube div width</button>
+
+	<div class="green sans-serif" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<a href="ummaland.com">ummaland</a>
+	</div>
+	<button id="changeU">change ummaland div</button>
+
+
+<script>
+$(function(){
+	$("#changeFb").click(function(){
+		$("#fb").css("width",200);
+
+	});
+	$("#changeYt").click(function(){
+		window.alert($("#youtube").innerHeight());
+		window.alert($("#youtube").outerHeight());
+
+		$("#youtube").css("width",100*Math.random()-50 + $("#youtube").width());
+		$("#youtube").addClass("green");
+		window.alert($("#youtube").innerHeight());
+		window.alert($("#youtube").outerHeight());
+
+
+
+	});
+	$("#changeU").click(function(){
+		$("#ummaland").removeClass("sans-serif");
+	});
+	$("#ummaland").click(function(){
+		$("#ummaland").removeClass("sans-serif");
+	});
+
+});
+</script>
+</body>
+</html>

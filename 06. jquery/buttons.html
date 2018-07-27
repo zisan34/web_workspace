@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buttons</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			padding: 5px
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}
+		p,ul{
+			margin: 0px;
+		}
+		.connectedList{
+			min-height: 30px;
+			border: dotted 1px;
+		}
+		
+		#city{
+			width: 200px;
+		}
+		.ui-autocomplete{
+			max-height: 100px;
+			overflow-y: auto;
+			max-width: 200px;
+			/*font-size: 5px;*/
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<button id="button1">Button 1</button>
+	<button id="button2">Button 2</button>
+	<button id="button3">Button 3</button>
+
+
+
+
+	<div class="blue ui-corner-all" id="fb">
+		<input type="checkbox" id="myCheckBox">
+		<label for="myCheckBox">headphones</label>
+	</div>
+	
+
+	<div class="red ui-corner-all" id="youtube">
+			<div id="checkBoxes">		
+			<input type="checkbox" id="myCheckBox1">
+			<label for="myCheckBox1">headphones</label>
+			<input type="checkbox" id="myCheckBox2">
+			<label for="myCheckBox2">charger</label>
+			<input type="checkbox" id="myCheckBox3">
+			<label for="myCheckBox3">powerbank</label>
+		</div>
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+	<form>
+		<div id="radioBoxes">
+			<input type="radio" id="radioBox1" name="radioBoxes">
+			<label for="radioBox1">Nokia</label>
+			<input type="radio" id="radioBox2" name="radioBoxes">
+			<label for="radioBox2">Samsung</label>
+			<input type="radio" id="radioBox3" name="radioBoxes">
+			<label for="radioBox3">IPhone</label>
+			
+		</div>
+	</form>
+	
+	
+	</div>
+	<div id="twitter" class="ui-corner-all"><p>twitter</p></div>
+
+
+
+<script>
+$(function(){
+	$("#button1").button();
+	$("#button2").button({
+		icons: {
+			primary: "ui-icon-folder-open"
+		},
+		text:false
+	});
+	$("#button3").button({
+		icons:{
+			primary:"ui-icon-caret-1-e",
+			secondary:"ui-icon-mail-closed"
+		}
+	});
+	$("#myCheckBox").button();
+	$("#checkBoxes").buttonset();
+	$("#radioBoxes").buttonset();
+
+
+
+});
+
+</script>
+</body>
+</html>

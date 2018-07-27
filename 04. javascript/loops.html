@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loops</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<p id="para">loops</p>
+	<script>
+		for(i=10;i>0;i--)
+		{
+			document.getElementById("para").innerHTML+= " "+i;
+		}
+		document.getElementById("para").innerHTML+= "</br>";
+
+		shoppingList=["pen","pencil","paper"];
+
+		for(i=0;i<shoppingList.length;i++)
+		{
+			document.getElementById("para").innerHTML+= " "+shoppingList[i];
+
+		}
+		document.getElementById("para").innerHTML+= "</br>";
+		i=0;
+
+		
+		while (i<=10) {
+			document.getElementById("para").innerHTML+= " "+i;
+			i++;
+			// statement
+		}
+	</script>
+
+</body>
+</html>

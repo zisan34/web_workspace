@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>menu</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			padding: 5px
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+	/*	li{
+			font-size: 1.5em;
+			cursor: grab;
+
+		}*/
+		p{
+			margin: 0px;
+		}
+		.ui-menu{
+			width: 200px;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+<div class="blue ui-corner-all" id="fb">
+
+<ul id="continents">
+	<li><div>Asia</div>
+	<ul>
+		<li class="ui-state-disabled"><div>India</div></li>
+		<li><div>Bangladesh</div>
+		<ul>
+			<li><div>Dhaka</div></li>
+			<li><div>Chittagong</div></li>
+		</ul>
+		</li>
+		<li><div>Shrilanka</div></li>
+		<li><div>Nepal</div></li>
+
+	</ul>
+	</li>
+	<li><div>Europe</div>
+	<ul>
+		<li><div>France</div></li>
+		<li><div>England</div>
+		<ul>
+			<li><div>London</div></li>
+			<li><div>Manchester</div></li>
+
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><div>North America</div></li>
+	<li><div>South America</div></li>
+	<li><div>Australia</div></li>
+</ul>
+</div>
+		
+
+
+<div class="red ui-corner-all" id="youtube">
+<ul id="menu">
+	<li class="ui-widget-header ui-state-disabled"><div>Toys (n/a)</div></li>
+	<li class="ui-widget-header"><div>Books</div></li>
+	<li class="ui-widget-header"><div>Clothing</div></li>
+	<li class="ui-widget-header"><div>Electronics</div></li>
+	  <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+	  <li><div>Car Hifi</div></li>
+	  <li><div>Utilities</div></li>
+	
+	<li class="ui-widget-header"><div>Movies</div></li>
+	<li class="ui-widget-header"><div>Music</div> </li>
+	  <li><div>Rock</div>
+	    <ul>
+	      <li><div>Alternative</div></li>
+	      <li><div>Classic</div></li>
+	    </ul>
+	  </li>
+	  <li><div>Jazz</div>
+	    <ul>
+	      <li><div>Freejazz</div></li>
+	      <li><div>Big Band</div></li>
+	      <li><div>Modern</div></li>
+	    </ul>
+	  </li>
+	  <li><div>Pop</div></li>
+	
+	<li class="ui-widget-header ui-state-disabled"><div>Specials (n/a)</div></li>
+</ul>
+</div>
+	
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">	
+	
+	</div>
+
+	<div id="twitter" class="ui-corner-all"></div>
+
+
+
+<script>
+$(function(){
+	$("#continents").menu();
+	$("#menu").menu();
+
+
+
+});
+
+</script>
+</body>
+</html>

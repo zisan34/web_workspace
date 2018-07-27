@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>positioning</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+			position: fixed;
+			top: 30px;
+			left: 20px;
+			z-index: 1;
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+
+			position: relative;
+			top: 50px;
+			left: 80px;
+			z-index: 2;
+
+		}
+		.green {
+			color: white;
+			height: 100px;
+			width: auto;
+			background-color: #24C166;
+
+			position: absolute;
+			top: 90px;
+			left: 30px;
+			z-index: 3;
+
+
+		}
+		.blue2 {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+			position: fixed;
+			bottom: 30px;
+			right:  20px;
+
+		}
+		.cgreen {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #235e24;
+
+			position: absolute;
+			top: 80px;
+			left: 10px;
+/*			z-index: 3;
+*/
+
+		}
+		.great {
+			background-color: #000;
+			color: yellow;
+			position: absolute;
+			left: 20px;
+			}
+	</style>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue">
+		<p>Facebook is <span class="great">great social media.</span></p>
+	</div>
+	<div class="red">
+		<p>Youtube</p>
+	</div>
+	<div class="green">
+		<p>Ummaland is site for <span class="cgreen">muslim social communication</span></p>
+	</div>
+	<div class="blue2">
+		<p>Facebook is <span class="great">great </span>social media.</p>
+	</div>
+
+</body>
+</html>

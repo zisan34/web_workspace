@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change html elements 2</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		/*p:hover{
+			cursor: pointer;
+		}*/
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue" id="fb">
+		facebook
+
+	</div>
+	<button id="add2fb">add to facebook div</button>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+	<button id="add2ytb">add to youtube div</button>
+
+	<div class="green" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<a href="ummaland.com">ummaland</a>
+	</div>
+	<button id="add2u">add to ummaland</button>
+
+
+<script>
+$(function(){
+	$("#add2fb").click(function(){
+		$("#fb").append("<p>facebook is great social networking site</p>");
+	});
+	$("#add2ytb").click(function(){
+		$("#youtube").prepend("<ul><li>home</li><li>profile</li></ul>");
+	});
+	$("#add2u").click(function(){
+		// $("#ummaland a").after("<p>hi</p>");
+		$("#upara").before("<p>hi</p>");
+	});
+});
+</script>
+</body>
+</html>

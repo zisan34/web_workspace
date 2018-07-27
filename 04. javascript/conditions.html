@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conditions</title>
+</head>
+	<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+
+<body>
+	<p>Speed of your car:<input type="number" id="speed" placeholder="enter your speed here"><button onclick="checkspeed()">Check</button></p>
+
+	<p>Current Season:<input id="season" placeholder="enter your Current season"><button onclick="season()">Submit</button></p>
+	<script>
+		function checkspeed()
+		{
+			var x=document.getElementById("speed").value;
+			if(x>80){ window.alert("too fast");}
+			else if(x<40){window.alert("too slow");}
+			else window.alert("you're good");
+		}
+		function season()
+		{
+		var x=document.getElementById("season").value.toLowerCase();
+		switch (x) {
+			case "summer": window.alert("summer");
+				break;
+			case "winter": window.alert("winter");
+				break;
+			case "spring": window.alert("spring");
+				break;
+			case "autumn": window.alert("autumn");
+				break;
+			default:
+				window.alert("undefined");
+				break;
+		}
+		}
+
+	</script>
+</body>
+</html>

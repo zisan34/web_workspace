@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objec Using Constructor</title>
+</head>
+<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+<body>
+	<script >
+		function car(manufacturer,model,used,color)
+		{
+			this.manufacturer=manufacturer;
+			this.model=model;
+			this.used=used;
+			this.color=color;
+			this.extendUsed=function(x)
+			{
+				this.used+=x;
+			}
+		}
+		myCar = new car("TOYOTA","Pajero",12,"Black");
+		window.console.log(myCar);
+		myCar.extendUsed(10);
+		window.console.log(myCar);
+		// herCar= myCar;
+		// window.console.log(herCar);
+		// herCar.extendUsed(10);
+		// window.console.log(herCar);
+		// window.console.log(myCar);
+		herCar = new car("TOYOTA","Pajero",12,"Black");
+		window.console.log(herCar);
+		herCar.extendUsed(15);
+		window.console.log(herCar);
+		myCar.condition="Very Old";
+		window.console.log(myCar);
+		window.console.log(myCar.condition);
+		car.prototype.condition= "new";
+		window.console.log(herCar.condition);
+		window.console.log(myCar.condition);
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

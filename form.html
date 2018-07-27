@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+<form >
+  <select id="cars1" name="cars">
+    <option id="volvo" value="volvo" type="submit"><button id="volvo">Volvo</button></option>
+    <option id="saab" value="saab" type="submit"><button id="saab">Saab</button></option>
+    <option id="fiat" value="fiat"><button id="saab">Fiat</button></option>
+    <option id="audi" value="audi"><button id="saab">Audi</button></option>
+  </select>
+  <br><br>
+    <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+    <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+<p id="para"></p>
+
+<script >
+	val=document.getElementById('cars1').value;
+	// document.getElementById('para').innerHTML=val;
+	document.getElementById('volvo').onclick()=function(){
+		document.getElementById('para').innerHTML=document.getElementById('volvo').value;
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cookie</title>
+</head>
+<body>
+	<div id="new">COOKIES</div>
+	<script>
+		document.cookie = "name=Labiba";
+		document.cookie = "age=22";
+		document.cookie = "home town= Cumilla";
+		window.alert(document.cookie);
+		var cookie=document.cookie.split(';');
+		for(i=0;i<cookie.length;i++)
+		document.getElementById("new").innerHTML+="<br>"+cookie[i];
+
+	</script>
+
+</body>
+</html>

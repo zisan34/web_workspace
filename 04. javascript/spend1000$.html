@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spend 1000$ randomly</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div id="statement">
+		<p>Starting Balance:<input type="number" id="bal"><button onclick="initiate()">Spend Randomly</button></p>
+	</div>
+	<div id="result"></div>
+	<script>
+		// innerOfStatement=document.getElementById("statement").innerHTML;
+		// window.alert(innerOfStatement);
+		function initiate()
+		{
+			document.getElementById("result").innerHTML="";
+			balance=document.getElementById("bal").value;
+		itemsBought=0;
+		while(balance>0)
+		{
+			price=Math.ceil(Math.random()*100);
+			if(price<=balance)
+			{
+				itemsBought++;
+				balance-=price;
+			
+			document.getElementById("result").innerHTML+="<p>Price: "+price+" Current Balance: "+balance+"</p>";
+			}
+		}
+		document.getElementById("result").innerHTML+="<p> Items Bought: "+itemsBought+"</p>";
+		}
+	</script>
+
+</body>
+</html>

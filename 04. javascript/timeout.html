@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message after timeout</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<p id=counter>0</p>
+	<button onclick="clearTimeout(deleyedMessage)">Avoid welcome message</button>
+
+<script>
+	counter=document.getElementById("counter");
+	x=counter.innerHTML;
+	mycounter=setInterval(function(){x++; counter.innerHTML=x;}, 1000);
+	deleyedMessage=setTimeout(function(){window.alert("Welcome")},5000);
+</script>
+
+</body>
+</html>

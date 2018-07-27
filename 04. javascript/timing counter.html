@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>timing counter</title>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<p id=counter>0</p>
+	<button onclick="start()">Start counting</button>
+	<button onclick="clearInterval(mycounter)">Stop counting.</button>
+
+<script>
+	function start()
+	{
+	counter=document.getElementById("counter");
+	x=counter.innerHTML;
+	//x=0;
+	mycounter=setInterval(function(){x++; counter.innerHTML=x;}, 1000);
+	}
+</script>
+</body>
+</html>

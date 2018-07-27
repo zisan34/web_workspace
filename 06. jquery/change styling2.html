@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>change html elements 2</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: 300px;
+			background-color: rgb(255, 0, 0);
+			padding: 10px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		/*p:hover{
+			cursor: pointer;
+		}*/
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<button id="changeFb">change facebook div </button>
+	<button id="changeYt">change youtube div </button>
+	<button id="changeU">change ummaland div</button>
+	<button id="changeGreat">change great span</button>
+
+
+	<div class="blue" id="fb">
+		facebook <span id="great">is great</span>
+
+	</div>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+
+	<div class="green sans-serif" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<a href="ummaland.com">ummaland</a>
+	</div>
+
+
+<script>
+$(function(){
+	$("#youtube,#changeYt").click(function(){
+		$("#youtube").css("position","absolute");
+		$("#youtube").css({'top':150*Math.random(), 'left': 150*Math.random(), 'background-color': 'rgb('+255*Math.random()+','+255*Math.random()+','+255*Math.random()+')' });
+
+	});
+	$("#changeU").click(function(){
+		$("#ummaland").toggleClass("green");
+	});
+	$("#fb").dblclick(function(){
+		$("#fb").hide();
+	});
+	$("#changeFb").click(function(){
+		$("#fb").show();
+	});
+	$("#changeGreat").click(function(){
+		$("#great").wrap("<p></p>");
+	});
+
+	
+
+});
+</script>
+</body>
+</html>

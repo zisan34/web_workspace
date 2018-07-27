@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery effects</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: 300px;
+			background-color: rgb(255, 0, 0);
+			padding: 10px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		/*p:hover{
+			cursor: pointer;
+		}*/
+	</style>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<button id="FadeOutFb">FadeOut facebook div </button>
+	<button id="FadeInFb">FadeIn fb div </button>
+	<button id="ToggleFadeFb">ToggleFadeFb</button>
+	<button id="ToggleFadeAll">ToggleFadeAll</button>
+	<button id="animateFb">Animate Fb</button>
+
+
+	<div class="blue" id="fb">
+		facebook <span id="great">is great</span>
+
+	</div>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+
+	<div class="green sans-serif" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<a href="ummaland.com">ummaland</a>
+	</div>
+
+
+<script>
+$(function(){
+	$("#FadeOutFb").click(function(){
+		// $("#fb").fadeOut();
+		// $("#fb").fadeOut("slow");
+		// $("#fb").fadeOut("fast");
+		// $("#fb").fadeOut(3000);
+		$("#fb").fadeOut(3000,function(){window.alert("HI!")});
+
+	});
+	$("#FadeInFb").click(function(){
+	// $("#fb").fadeIn();
+	// $("#fb").fadeIn("slow");
+	// $("#fb").fadeIn("fast");
+	// $("#fb").fadeIn(3000);
+	$("#fb").fadeIn(3000,function(){window.alert("HI!")});
+
+	});
+	$("#ToggleFadeFb").click(function(){
+	// $("#fb").fadeToggle();
+	// $("#fb").fadeToggle("slow");
+	// $("#fb").fadeToggle("fast");
+	// $("#fb").fadeToggle(3000);
+	$("#fb").fadeToggle(1000,function(){window.alert("HI!")});
+
+	});
+	$("#ToggleFadeAll").click(function(){
+		$("#fb").fadeToggle(1000);
+		$("#youtube").fadeToggle(2000);
+		$("#ummaland").fadeToggle(3000);
+	
+	});
+	// $("#animateFb").click(function(){
+	// 	$("#fb").animate({'width':200, 'height':100, 'opacity': .8},1000);
+	// });
+	$("#animateFb").click(function(){
+		$("#fb").animate({'width':200},1000);
+		$("#fb").animate({'height':200},1000);
+		$("#fb").animate({'width':400},1000);
+		$("#fb").delay(1000).animate({'height':400},1000);
+
+	});
+	
+
+});
+</script>
+</body>
+</html>

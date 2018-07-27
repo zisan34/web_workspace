@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrays</title>
+</head>
+<!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+<body>
+	<p id=paragrap>Arrays</p>
+	<script >
+	var shplist=["bread","egg","milk"];
+	var list=new Array("tshirt","jeans","shoe");
+	document.getElementById("paragrap").innerHTML+="</br>"+shplist;
+	
+	function result(x){
+		document.getElementById("paragrap").innerHTML+="</br>"+x;
+	}
+
+	// // result(list);
+	// // result(list[0]);
+	// result(list[1]);
+	// delete list[1];
+	// result(list[1]);
+	// list[1]="gaberdine";
+	// result(list[1]);
+	// list[3]="watch";
+	// result(list);
+	// list.splice(1,1);
+	// result(list);
+	// list.splice(2,0,"sandal","shirt");
+	// result(list);
+	// list.sort();
+	// result(list);
+	// list.reverse();
+	// result(list);
+	myString="abcd";
+	myarray=myString.split("");
+	result(myarray);
+	myString="w x y z";
+	myarray=myString.split("");
+	result(myarray);
+	myarray=myString.split(" ");
+	result(myarray);
+	myarray=myString.split(" ", 2);
+	result(myarray);
+
+
+
+
+
+
+
+	</script>
+
+
+</body>
+</html>

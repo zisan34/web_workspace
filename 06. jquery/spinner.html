@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>slider</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			padding: 5px
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: rgb(255, 0, 0);
+			padding: 5px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #24C166;
+			padding: 5px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#twitter{
+			height: 100px;
+			background-color: purple;
+			margin-top: 10px;
+		}
+		p{
+			margin: 0px;
+		}
+		
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+
+
+<div class="blue ui-corner-all" id="fb">
+<p>
+	<label for="myInput">Enter a value:</label>
+	<input id="myInput" name="myInput" value="30" title="please select a value">
+</p>
+</div>
+		
+
+
+<div class="red ui-corner-all" id="youtube">
+<ul>
+	<li><a href="#tab1">tab 1</a></li>
+	<li ><a href="#tab2">tab 2</a></li>
+	<li><a href="#tab3">tab 3</a></li>
+</ul>
+<div id="tab1"><p>Content 1</p></div>
+<div id="tab2"><p>Content 2</p></div>
+<div id="tab3"><p>Content 3</p></div>
+
+</div>
+	
+
+	<div class="green sans-serif ui-corner-all" id="ummaland" title="ummaland">	
+	
+	</div>
+
+	<div id="twitter" class="ui-corner-all"></div>
+
+
+
+<script>
+$(function(){
+$("#myInput").spinner({
+	min: 10
+	,max:100
+	,step:4
+});
+
+$("#youtube").tabs({
+	collapsible:true
+	,event:"mouseover"
+});
+$("#youtube").tabs().find(".ui-tabs-nav").sortable({
+axis:"x"
+});
+$(document).tooltip({
+	show: {effect:"slideDown"}
+});
+$("#myInput").tooltip({
+	show:{effect: "explode"}
+});
+
+});
+</script>
+</body>
+</html>

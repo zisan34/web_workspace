@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: auto;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: 100px;
+			width: 300px;
+			background-color: rgb(255, 0, 0);
+			padding: 10px;
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		p{
+			margin: 0px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jq/jquery-3.3.1.min.js"></script>
+	
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<button>load to Ummaland</button>
+	<div class="blue" id="fb">
+		facebook
+
+	</div>
+
+	<div class="red" id="youtube">
+		youtube	
+
+	</div>
+
+	<div class="green sans-serif" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<a href="ummaland.com">ummaland</a>
+	</div>
+
+
+<script>
+$(document).ready(function(){
+	$("#fb").load("ajax/data1.txt");
+	$("#youtube").load("ajax/data1.txt #p2");
+
+$("button").click(function(){
+        // $.ajax({url: "ajax/data1.txt", success: function(result){
+        //     $("#ummaland").html(result);}});
+    	
+    	$.ajax({url : "ajax/data1.txt"}).done(function(data){
+    		$("#ummaland").html(data);
+        	});
+
+     // $("#ummaland").load("ajax/data1.txt");
+});
+});
+</script>
+</body>
+</html>

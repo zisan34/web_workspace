@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dragable & droppable 2</title>
+	<style type="text/css">
+		.blue {
+			color: white;
+			height: 30px;
+			width: auto;
+			background-color: #45619D;
+			/*font-size: 30px;*/
+
+		}
+		.red {
+			color: white;
+			height: auto;
+			width: 200px;
+			background-color: rgb(255, 0, 0);
+		}
+		.green {
+			color: white;
+			height: auto;
+			width: 600px;
+			background-color: #24C166;
+			padding: 15px;
+
+		}
+		.sans-serif{
+			font-family:  sans-serif;
+		}
+		#great {
+			background-color: #000;
+			color: yellow;
+		}
+		#droppable{
+			height: 100px;
+			background-color: purple;
+			margin-top: 5px;
+		}
+		p,ul{
+			margin: 0px;
+		}
+		#list li{
+			cursor: grab;
+		}
+	</style>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/le-frog/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+
+<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+<script src="jq/jquery-3.3.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+</head>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<body>
+	<div class="blue ui-corner-all" id="fb">
+		facebook
+
+	</div>
+
+	<div class="red ui-corner-all" id="youtube">
+		<ul id="list">
+			<li>egg</li>
+			<li>bread</li>
+			<li>butter</li>
+		</ul>
+
+	</div>
+
+	<div class="green sans-serif ui-corner-all" id="ummaland">
+		<p id="upara">ummaland</p>	
+		<p><a href="ummaland.com">ummaland</a> </p>
+	</div>
+	<div id="droppable" class="ui-corner-all"><p>drop here</p></div>
+
+
+
+<script>
+$(function(){
+	// var droppableHeight=$("#droppable").height();
+	$("#fb").draggable({
+		// stop: function(){
+		// 	$('<span></span><br>').text($(this).text()).appendTo("#droppable");
+		// }
+	});
+	$("#ummaland").draggable({revert:true});
+	$("#droppable").droppable({
+		drop: function(event,ui){
+			$(this).css("background-color",'rgb('+255*Math.random()+','+255*Math.random()+','+255*Math.random()+')');
+			$(this).find("p").remove();
+			$("<div></div>").text(ui.draggable.text()).appendTo(this);
+
+			var varHeight=$(this).height();
+			$(this).css("height",varHeight+20);
+
+
+
+
+		}
+		,accept:"#list li, #fb"
+	});
+	$("#list").find("li").draggable({
+		helper:"clone",
+		appendTo: "body",
+		// stop: function(){
+		// 	$('<span></span><br>').text($(this).text()).appendTo("#droppable");
+		// }
+	});
+
+});
+
+</script>
+</body>
+</html>
