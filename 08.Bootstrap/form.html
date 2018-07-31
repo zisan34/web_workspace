@@ -9,20 +9,6 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<style type="text/css">
-		.blueBox{
-			background-color: #1E24A5;
-			height: 100px;
-			color: white
-		}
-		.greenBox{
-			height: 100px;
-			background-color: #33A918;
-			color: white;
-		}
-		.redBox{
-			height: 100px;
-			background-color: #ED0505;
-		}
 		.clear{
 			clear: both;
 		}
@@ -30,21 +16,56 @@
 			float: left;
 		}
 	</style>
-    <title>grid</title>
+    <title>form</title>
   </head>
   <body>
-  <div class="container-fluid">
-    <div id="deviceSize">Device Size: <span id="size"></span></div>
-    <div class="blueBox col-7 col-sm-6 col-md-5 col-lg-4 col-xl-3"></div>
-  	<div class="greenBox col-5 col-sm-6 col-md-7 col-lg-8 col-xl-9"></div>
+    <div class="container-fluid">
+      <form class="form-inline">
+        <div class="form-group mr-sm-2">
+          <label for="email" class=" mr-sm-2">Email:</label>
+        <input type="email" id="email" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group mr-sm-2">
+          <label for="password" class=" mr-sm-2">Password:</label>
+        <input type="password" id="password" placeholder="Password" class="form-control">
+        </div>
 
-  </div>
-  <dir class="clear"></dir>
+        <div class="form-group form-check mr-sm-2">
+          <label class="form-check-label" class=" mr-sm-2"></label>
+          <input class="form-check-input" type="checkbox"> Remember Me 
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-sm-2">Login</button>
+        
+
+      </form>
+
+      <!-- <br> -->
+      <hr>
 
 
-  </div>
-  
+      <form class="form-horizontal">
+        <div class="form-group mr-sm-2">
+          <label for="email" class=" mr-sm-2">Email:</label>
+        <input type="email" id="email" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group mr-sm-2">
+          <label for="password" class=" mr-sm-2">Password:</label>
+        <input type="password" id="password" placeholder="Password" class="form-control">
+        </div>
 
+        <div class="form-group form-check mr-sm-2">
+          <label class="form-check-label" class=" mr-sm-2"></label>
+          <input class="form-check-input" type="checkbox"> Remember Me 
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-sm-2">Login</button>
+        
+
+      </form>
+
+    </div>
+  </body>
 
 
     <!-- Optional JavaScript -->
@@ -58,40 +79,6 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>
-  $(document).ready(function(){
-  		$( window ).resize(function(){
-
-	var windowWidth = $(window).width();
-	if(windowWidth<576){
-		$('#size').text(windowWidth+'-px extra small devices(Phones)');
-		$('.blueBox').text('-col-7');
-		$('.greenBox').text('-col-5');
-	}
-	else if(windowWidth<768){
-		$('#size').text(windowWidth+'-px small devices(Tablets)');
-		$('.blueBox').text('-col-sm-6');
-		$('.greenBox').text('col-sm-6');
-	}
-	else if(windowWidth<992){
-			$('#size').text(windowWidth+'-px Medium devices(Desktop)');
-		$('.blueBox').text('col-md-5');
-		$('.greenBox').text('col-md-7');
-		}
-	else if(windowWidth<1200){
-			$('#size').text(windowWidth+'-px Large devices(Desktop)');
-		$('.blueBox').text('col-lg-4');
-		$('.greenBox').text('col-lg-8');
-		}
-	else{
-		$('#size').text(windowWidth+'-px Extra Large devices');
-		$('.blueBox').text('col-xl-3');
-		$('.greenBox').text('col-xl-9');
-
-	}
-
-	});
-
-  });
 
 
 
